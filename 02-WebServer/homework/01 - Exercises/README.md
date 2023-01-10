@@ -56,6 +56,7 @@ npm start
 🔹 Dentro de la carpeta `01 - Exercises`, vas a encontrar la siguiente estructura:
 
 -  Una carpeta llamada `utils`.
+-  Una carpeta llamada `tests`.
 -  Un archivo **server.js**.
 -  Un archivo **.gitignore**.
 -  Un archivo **package.json**.

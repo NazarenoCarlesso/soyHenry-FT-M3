@@ -42,7 +42,7 @@ En esta homework, vamos a estructurar nuestro proyecto, crear nuestro primer ser
    - Una carpeta llamada `utils`.
    - Una carpeta llamada `test`.
 
-7. Pasa el archivo `data.js` que se encuentra en **front/src** a la carpeta **back/src/utils**.
+7. Pasa el archivo `data.js` que se encuentra en la carpeta **02 - Integration** a tu carpeta **back/src/utils**.
    <br />
 
 ---
@@ -75,7 +75,7 @@ En esta homework, vamos a estructurar nuestro proyecto, crear nuestro primer ser
 
 2. Dentro del archivo **app.js** tienes una función llamada `onSearch`. La URL a la que le haces la petición es
 
-En el archivo App.js, donde tienes dentro de la función **onSearch**, cambia la ruta get que actualmente llama **https://rickandmortyapi.com/api/character/**. Tienes que reemplazarla por esta nueva URL: ` http://localhost:3001/rickandmorty`.
+En el archivo App.js, donde tienes dentro de la función **onSearch**, cambia la ruta get que actualmente llama **<https://rickandmortyapi.com/api/character/>**. Tienes que reemplazarla por esta nueva URL: `http://localhost:3001/rickandmorty`.
 
 > **[NOTA]:** recuerda agregar a la ruta el id.
 
