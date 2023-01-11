@@ -56,12 +56,11 @@ npm run test:promises
 
 - Una carpeta llamada `poem-one`.
 - Una carpeta llamada `poem-two`.
-- Una carpeta llamada `tests`
-- Un archivo `demo-poem.txt`.
-- Un archivo `demo.js`.
-- Un archivo `exercise-one.js`
-- Un archivo `exercise-two.js`
-- Un archivo `utils.js`
+- Una carpeta llamada `tests`.
+- Una carpeta llamada `demo`.
+- Un archivo `exercise-one.js`.
+- Un archivo `exercise-two.js`.
+- Un archivo `utils.js`.
 - Y el archivo **README.md** que ahora mismo estás leyendo. 😙
 
 ---
@@ -72,7 +71,7 @@ npm run test:promises
 
 ### **Poema uno**
 
-📍 Dirígete al archivo `exercise-one.js`. Encontrarás las funciones "**problemA**, "**problemB**", "**problemC**", "**problemD**", "**problemE**", en este archivo. Trabajaremos en las cinco.
+📍 Dirígete al archivo `exercise-one.js`. Encontrarás las funciones "**problemA**, "**problemB**", "**problemC**" en este archivo. Trabajaremos en las tres.
 
 > Hint: exercisesUtils es una variable que viene del archivo `utils.js`, este archivo crea un `promisifiedReadFile`, lo necesitarás para los ejercicios.
 
@@ -82,29 +81,23 @@ npm run test:promises
 
 📍 Lo que hay que hacer:
 
-1. Función problemA:
+1. Función problemA: El objetivo del ejercicio es leer y loguear del poema uno, la **stanza-02.txt** y después leer y loguear la **stanza-03.txt**, luego debes loguear 'done' cuando ambas promesas hayan terminado, ignora por este ejercicio los errores:
 
    a. Utiliza el método `promisifiedReadFile` del objeto **exerciseUtils**, que se encuentra dentro del archivo **utils.js**, de la siguiente manera: `exerciseUtils.promisifiedReadFile` este método nos devuelve una promesa que a su vez nos entrega el contenido del archivo.
 
-   b. El método **promisifiedReadFile** recibe como parámetro: la ruta donde se encuentra **stanza-01.txt**, recuerda que ésta se encuentra en la carpeta **poem-one**, por el momento ignora los errores.
+   b. El método **promisifiedReadFile**, debe recibir como parámetro la **stanza-02.txt**.
 
-   c. Luego, llama al método `.then`, el cual recibe como parámetro la función `blue` que se encuentra en el archivo **utils.js**.
+   c. Llama el método **.then** que también recibe una respuesta, si resuelve llamamos la función **blue** y retornamos **promisifiedReadFile** para la **stanza-03.txt**.
 
-2. Función problemB: En este ejercicio el objetivo es leer y loguear del poema uno, la **stanza-02.txt** y después leer y loguear la **stanza-03.txt**, luego debes loguear 'done' cuando ambas promesas hayan terminado, ignora por este ejercicio los errores:
+   d. Vuelve a llamar el método **.then** que haga lo mismo que se realizó para la **stanza-02.txt**.
 
-   a. Nuevamente utiliza el método **promisifiedReadFile**, el cual reciba como parámetro la **stanza-02.txt**, recuerda llamar el método de la siguiente manera: `exerciseUtils.promisifiedReadFile`para que los test puedan pasar.
+2. Función problemB:
 
-   b. Llama el método **.then** que también recibe una respuesta, si resuelve llamamos la función **blue** y retornamos **promisifiedReadFile** para la **stanza-03.txt**.
-
-   c. Vuelve a llamar el método **.then** que haga lo mismo que se realizó para la **stanza-02.txt**.
-
-3. Función problemC:
-
-   a.Vuelve a utilizar el método **exerciseUtils.promisifiedReadFile** y pasa como parámetro **poem-one/wrong-file-name.txt** que loguea el error o también puedes loguear **stanza-04.txt**. b.Sin embargo, ten en cuenta los dos caminos en esta promesa: si se resuelve, llama el método **.then** y con la respuesta llama la función **blue**. c. Si no se resuelve, llama el handleError que ejecute la función `magenta` la cual se encuentra en el archivo **utils.js**.
+   a.Vuelve a llamar el método **exerciseUtils.promisifiedReadFile** y pasa como parámetro **poem-one/wrong-file-name.txt** que loguea el error o también puedes loguear **stanza-04.txt**. b.Sin embargo, ten en cuenta los dos caminos en esta promesa: si se resuelve, llama el método **.then** y con la respuesta llama la función **blue**. c. Si no se resuelve, llama el handleError que ejecute la función `magenta` la cual se encuentra en el archivo **utils.js**.
 
    > Hint: En caso de tener que lanzar un error deberías hacerlo con new Error() para que pase los tests correctamente.
 
-4. Función problemD: Teniendo de base los ejercicios anteriores, en esta función debes:
+3. Función problemC: Teniendo de base los ejercicios anteriores, en esta función debes:
 
    a. Leer y loguear la **stanza-03.txt**
 
@@ -113,16 +106,6 @@ npm run test:promises
    c. Loguea un error si llegara a suceder para cualquiera de las dos promesas anteriores: **stanza-03.txt** y **stanza-04.txt**
 
    > Hint: Puedes usar el método `catch` que reciba la función magenta, la cual mostrará el error.
-
-5. Función problemE: Teniendo de base los ejercicios anteriores, en esta función debes:
-
-   a. Leer y loguear la **stanza-03.txt**
-
-   b. Luego debe leer y la **stanza-04.txt**.
-
-   c. Loguea un error si llegara a suceder para cualquiera de las dos promesas anteriores: **stanza-03.txt** y **stanza-04.txt**.
-
-   d. En ambos caminos, tanto en la resolución de la promesa como en la rechazada debes loguear 'done' cuando haya terminado todo.
 
 ---
 

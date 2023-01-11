@@ -9,8 +9,7 @@ let args = process.argv.slice(2).map(function (st) {
 module.exports = {
   problemAx: problemA,
   problemBx: problemB,
-  problemCx: problemC,
-  problemDx: problemD,
+  problemCx: problemC
 };
 
 // corre cada problema dado como un argumento del command-line para procesar
@@ -30,6 +29,10 @@ function problemA() {
 
   // promise version
   // Tu código acá:
+  exerciseUtils.promisifiedReadFile('poem-two/stanza-01.txt')
+    .then(stanza => exerciseUtils.blue(stanza))
+  exerciseUtils.promisifiedReadFile('poem-two/stanza-02.txt')
+    .then(stanza => exerciseUtils.blue(stanza))
 }
 
 function problemB() {
@@ -46,6 +49,10 @@ function problemB() {
 
   // promise version
   // Tu código acá:
+  filenames.forEach(filename => {
+    exerciseUtils.promisifiedReadFile(filename)
+      .then(stanza => exerciseUtils.blue(stanza))
+  })
 }
 
 function problemC() {
@@ -65,6 +72,11 @@ function problemC() {
 
   // promise version
   // Tu código acá:
+  filenames.forEach(filename => {
+    exerciseUtils.promisifiedReadFile(filename)
+      .then(stanza => exerciseUtils.blue(stanza))
+      .catch(err => exerciseUtils.magenta(new Error(err)))
+  })
 }
 
 function problemD() {
