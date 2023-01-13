@@ -83,6 +83,7 @@ npm run nodemon
 
 - Una carpeta llamada `img`.
 - Una carpeta llamada **src**.
+- Una carpeta llamada **tests**.
 - Un archivo `package.json`
 - Y el archivo **README.md** que ahora mismo estás leyendo. 😙
 
